@@ -15,6 +15,7 @@
 package sdk_struct
 
 import (
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/protocol/sdkws"
 )
 
@@ -285,11 +286,26 @@ type MessageEntity struct {
 	Url    string `json:"url,omitempty"`
 	Ex     string `json:"ex,omitempty"`
 }
+
 type GroupHasReadInfo struct {
-	HasReadUserIDList []string `json:"hasReadUserIDList,omitempty"`
-	HasReadCount      int32    `json:"hasReadCount"`
-	GroupMemberCount  int32    `json:"groupMemberCount"`
+	HasReadUserIDList []string         `json:"hasReadUserIDList,omitempty"`
+	UserIDReadTimeMap map[string]int64 `json:"userIDReadTimeMap,omitempty"`
+	HasReadCount      int32            `json:"hasReadCount"`
+	GroupMemberCount  int32            `json:"groupMemberCount"`
 }
+
+type GroupMessageReadInfo struct {
+	ClientMsgID  string                          `json:"clientMsgID"`
+	HasReadCount int32                           `json:"hasReadCount"`
+	UnreadCount  int32                           `json:"unreadCount"`
+	ReadMembers  []model_struct.LocalGroupMember `json:"readMembers"`
+}
+
+type GroupMessageReceiptInfo struct {
+	ConversationID       string                 `json:"conversationID"`
+	GroupMessageReadInfo []GroupMessageReadInfo `json:"groupMessageReadInfo"`
+}
+
 type NewMsgList []*MsgStruct
 
 // Implement the sort.Interface interface to get the number of elements method
