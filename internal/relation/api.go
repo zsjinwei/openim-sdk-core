@@ -3,8 +3,8 @@ package relation
 import (
 	"context"
 
-	"github.com/openimsdk/protocol/relation"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/relation"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/datafetcher"
@@ -13,7 +13,7 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/server_api_params"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func (r *Relation) GetSpecifiedFriendsInfo(ctx context.Context, friendUserIDList []string, filterBlack bool) ([]*model_struct.LocalFriend, error) {

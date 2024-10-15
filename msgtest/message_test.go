@@ -2,12 +2,13 @@ package msgtest
 
 import (
 	"context"
+	"testing"
+
 	"github.com/openimsdk/openim-sdk-core/v3/msgtest/module"
 	"github.com/openimsdk/openim-sdk-core/v3/msgtest/sdk_user_simulator"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/tools/log"
-	"testing"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func Test_SimulateMultiOnline(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 	"sort"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 // DataFetcher is a struct that handles data synchronization

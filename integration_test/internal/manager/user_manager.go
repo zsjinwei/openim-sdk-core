@@ -15,10 +15,10 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	sdkUtils "github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/protocol/sdkws"
-	userPB "github.com/openimsdk/protocol/user"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/mcontext"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	userPB "github.com/zsjinwei/openim-protocol/user"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/mcontext"
 )
 
 type TestUserManager struct {

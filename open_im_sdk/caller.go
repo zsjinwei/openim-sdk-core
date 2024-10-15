@@ -28,9 +28,9 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 func isNumeric(kind reflect.Kind) bool {

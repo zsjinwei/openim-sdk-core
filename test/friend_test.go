@@ -18,11 +18,11 @@ package test
 //import (
 //	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
 //	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdk_params_callback"
-//	"github.com/openimsdk/protocol/wrapperspb"
+//	"github.com/zsjinwei/openim-protocol/wrapperspb"
 //	"testing"
 //	"time"
 //
-//	friend2 "github.com/openimsdk/protocol/relation"
+//	friend2 "github.com/zsjinwei/openim-protocol/relation"
 //)
 //
 //func Test_GetSpecifiedFriendsInfo(t *testing.T) {

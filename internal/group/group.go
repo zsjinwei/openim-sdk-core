@@ -30,10 +30,10 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/protocol/group"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/group"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 const (

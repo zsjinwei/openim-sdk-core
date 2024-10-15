@@ -21,7 +21,7 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdk_params_callback"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	"github.com/openimsdk/protocol/conversation"
+	"github.com/zsjinwei/openim-protocol/conversation"
 )
 
 func Test_GetAllConversationList(t *testing.T) {

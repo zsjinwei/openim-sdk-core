@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"context"
 	"fmt"
-	"github.com/openimsdk/openim-sdk-core/v3/internal/third/file"
 	"io"
 	"math/rand"
 	"os"
@@ -12,14 +11,16 @@ import (
 	"strings"
 	"time"
 
+	"github.com/openimsdk/openim-sdk-core/v3/internal/third/file"
+
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	"github.com/openimsdk/openim-sdk-core/v3/version"
-	"github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/third"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-protocol/third"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 const (

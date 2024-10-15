@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	"github.com/openimsdk/protocol/constant"
+	"github.com/zsjinwei/openim-protocol/constant"
 )
 
 // config here

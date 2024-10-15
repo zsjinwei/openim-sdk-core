@@ -1,13 +1,13 @@
 package api
 
 import (
-	"github.com/openimsdk/protocol/auth"
-	"github.com/openimsdk/protocol/conversation"
-	"github.com/openimsdk/protocol/group"
-	"github.com/openimsdk/protocol/msg"
-	"github.com/openimsdk/protocol/relation"
-	"github.com/openimsdk/protocol/third"
-	"github.com/openimsdk/protocol/user"
+	"github.com/zsjinwei/openim-protocol/auth"
+	"github.com/zsjinwei/openim-protocol/conversation"
+	"github.com/zsjinwei/openim-protocol/group"
+	"github.com/zsjinwei/openim-protocol/msg"
+	"github.com/zsjinwei/openim-protocol/relation"
+	"github.com/zsjinwei/openim-protocol/third"
+	"github.com/zsjinwei/openim-protocol/user"
 )
 
 var (

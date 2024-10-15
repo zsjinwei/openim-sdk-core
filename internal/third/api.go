@@ -5,7 +5,7 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
 
-	"github.com/openimsdk/protocol/third"
+	"github.com/zsjinwei/openim-protocol/third"
 )
 
 func (c *Third) UpdateFcmToken(ctx context.Context, fcmToken string, expireTime int64) error {

@@ -28,8 +28,8 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 const (

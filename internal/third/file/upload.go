@@ -21,10 +21,6 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/tools/errs"
 	"io"
 	"net/http"
 	"net/url"
@@ -33,8 +29,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/openimsdk/protocol/third"
-	"github.com/openimsdk/tools/log"
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
+	"github.com/zsjinwei/openim-tools/errs"
+
+	"github.com/zsjinwei/openim-protocol/third"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 type UploadFileReq struct {

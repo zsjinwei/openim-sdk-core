@@ -14,7 +14,7 @@
 
 package sdkerrs
 
-import "github.com/openimsdk/tools/errs"
+import "github.com/zsjinwei/openim-tools/errs"
 
 var (
 	// Common errors

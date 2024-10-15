@@ -3,12 +3,13 @@ package module
 import (
 	"context"
 	"fmt"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"time"
 
-	"github.com/openimsdk/protocol/group"
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
+
+	"github.com/zsjinwei/openim-protocol/group"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 type TestGroupManager struct {

@@ -17,7 +17,7 @@ package group
 import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 func ServerGroupToLocalGroup(info *sdkws.GroupInfo) *model_struct.LocalGroup {

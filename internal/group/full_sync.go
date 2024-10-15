@@ -17,8 +17,8 @@ package group
 import (
 	"context"
 
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 func (g *Group) SyncAllJoinedGroupsAndMembers(ctx context.Context) error {

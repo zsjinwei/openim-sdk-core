@@ -37,9 +37,9 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 const (

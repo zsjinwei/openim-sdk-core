@@ -2,8 +2,9 @@ package progress
 
 import (
 	"context"
+
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/reerrgroup"
-	"github.com/openimsdk/tools/utils/stringutil"
+	"github.com/zsjinwei/openim-tools/utils/stringutil"
 )
 
 func FuncNameBarPrint(ctx context.Context, gr *reerrgroup.Group, now, total int) *Progress {

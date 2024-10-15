@@ -6,12 +6,12 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
-	constantpb "github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/group"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
+	constantpb "github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-protocol/group"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 //func (g *Group) GetIncrementalGroupMemberBatch(ctx context.Context, groups []*group.GetIncrementalGroupMemberReq) (map[string]*group.GetIncrementalGroupMemberResp, error) {

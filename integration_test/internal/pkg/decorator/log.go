@@ -3,9 +3,10 @@ package decorator
 import (
 	"context"
 	"fmt"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/stringutil"
 	"time"
+
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/stringutil"
 )
 
 // FuncLog is a log print decorator.

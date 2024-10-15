@@ -16,10 +16,11 @@ package open_im_sdk_callback
 
 import (
 	"context"
+
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 type OnFriendshipListenerSdk interface {

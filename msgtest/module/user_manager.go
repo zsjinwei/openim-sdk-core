@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/protocol/sdkws"
-	userPB "github.com/openimsdk/protocol/user"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	userPB "github.com/zsjinwei/openim-protocol/user"
 )
 
 type TestUserManager struct {

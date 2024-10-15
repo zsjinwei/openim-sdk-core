@@ -15,10 +15,10 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	pbconstant "github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/mcontext"
+	pbconstant "github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/mcontext"
 )
 
 var (

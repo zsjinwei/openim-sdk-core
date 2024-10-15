@@ -6,9 +6,9 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 type VersionSynchronizer[V, R any] struct {

@@ -22,14 +22,14 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
-	pbConstant "github.com/openimsdk/protocol/constant"
+	pbConstant "github.com/zsjinwei/openim-protocol/constant"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/version"
 
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/mcontext"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/mcontext"
 )
 
 func GetSdkVersion() string {

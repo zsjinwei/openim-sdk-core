@@ -24,7 +24,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 type HttpCli struct {

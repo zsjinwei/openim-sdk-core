@@ -28,10 +28,10 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/page"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 // apiClient is a global HTTP client with a timeout of one minute.

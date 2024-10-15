@@ -3,11 +3,12 @@ package interaction
 import (
 	"errors"
 	"fmt"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/utils/datautil"
 	"slices"
 	"sync"
 	"unsafe"
+
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 type subscriptionStatues struct {

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 var packet string

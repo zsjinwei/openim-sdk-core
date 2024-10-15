@@ -3,18 +3,19 @@ package conversation_msg
 import (
 	"context"
 	"encoding/json"
+	"time"
+
 	"github.com/jinzhu/copier"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	pconstant "github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
 	"github.com/patrickmn/go-cache"
-	"time"
+	pconstant "github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 const (

@@ -16,7 +16,7 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/version"
 
 	"github.com/openimsdk/openim-sdk-core/v3/msgtest/module"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func init() {

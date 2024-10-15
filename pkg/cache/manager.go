@@ -2,7 +2,8 @@ package cache
 
 import (
 	"context"
-	"github.com/openimsdk/tools/utils/datautil"
+
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 func NewManager[K comparable, V any](

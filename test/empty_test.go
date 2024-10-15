@@ -15,10 +15,11 @@
 package test
 
 import (
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
-	"github.com/openimsdk/tools/log"
 	"testing"
 	"time"
+
+	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func Test_Empty(t *testing.T) {

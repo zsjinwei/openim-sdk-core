@@ -21,8 +21,8 @@ import (
 	"context"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/tools/errs"
 	"github.com/pkg/errors"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 // ProcessUserCommandAdd adds a new user command to the database.

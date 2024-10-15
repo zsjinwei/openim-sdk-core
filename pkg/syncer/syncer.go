@@ -22,10 +22,10 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/page"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 // New creates a new Syncer instance with the provided synchronization functions.

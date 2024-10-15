@@ -26,7 +26,7 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 // NewUser creates a new User object.

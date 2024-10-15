@@ -18,7 +18,7 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 type LocalFriend struct {

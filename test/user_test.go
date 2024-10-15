@@ -19,12 +19,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openimsdk/protocol/user"
-	"github.com/openimsdk/protocol/wrapperspb"
+	"github.com/zsjinwei/openim-protocol/user"
+	"github.com/zsjinwei/openim-protocol/wrapperspb"
 
 	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
 
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 func Test_GetSelfUserInfo(t *testing.T) {

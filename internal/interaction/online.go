@@ -2,8 +2,9 @@ package interaction
 
 import (
 	"context"
+
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	userPb "github.com/openimsdk/protocol/user"
+	userPb "github.com/zsjinwei/openim-protocol/user"
 )
 
 func (c *LongConnMgr) subscribeUsersStatus(ctx context.Context, userIDs []string) ([]*userPb.OnlineStatus, error) {

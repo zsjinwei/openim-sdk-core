@@ -19,7 +19,7 @@ import (
 	"errors"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 
 	"os"
 	"path/filepath"

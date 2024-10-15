@@ -2,6 +2,7 @@ package manager
 
 import (
 	"context"
+
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/decorator"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/progress"
@@ -11,8 +12,8 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	sdkUtils "github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/stringutil"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/stringutil"
 )
 
 type TestGroupManager struct {

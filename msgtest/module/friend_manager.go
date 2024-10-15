@@ -2,7 +2,7 @@ package module
 
 import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/protocol/relation"
+	"github.com/zsjinwei/openim-protocol/relation"
 )
 
 type TestFriendManager struct {

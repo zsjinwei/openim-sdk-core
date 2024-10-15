@@ -2,8 +2,9 @@ package group
 
 import (
 	"context"
+
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 func (g *Group) buildGroupMemberKey(groupID string, userID string) string {

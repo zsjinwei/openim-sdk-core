@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/protocol/user"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/user"
 )
 
 func (u *User) getUsersInfo(ctx context.Context, userIDs []string) ([]*sdkws.UserInfo, error) {

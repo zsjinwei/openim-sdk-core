@@ -4,14 +4,15 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
-	"github.com/openimsdk/tools/utils/formatutil"
 	"io"
 	"os"
 	"sync"
+
+	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
+	"github.com/zsjinwei/openim-tools/utils/formatutil"
 )
 
 // Running used to record whether there is a progress currently running. Only one progress is allowed to run at the same time.

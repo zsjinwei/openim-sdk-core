@@ -29,7 +29,7 @@ import (
 
 	"nhooyr.io/websocket"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 type JSWebSocket struct {

@@ -2,7 +2,8 @@ package checker
 
 import (
 	"context"
-	"github.com/openimsdk/tools/log"
+
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 const (

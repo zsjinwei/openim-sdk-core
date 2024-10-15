@@ -9,12 +9,12 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	sdk "github.com/openimsdk/openim-sdk-core/v3/pkg/sdk_params_callback"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/protocol/msg"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/msg"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 // Check for internal continuity. If discontinuity is found, fill in the gaps.

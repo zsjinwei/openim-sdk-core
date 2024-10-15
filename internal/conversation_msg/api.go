@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 
 	"github.com/openimsdk/openim-sdk-core/v3/internal/third/file"
 	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
@@ -25,10 +25,10 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 
-	pbConversation "github.com/openimsdk/protocol/conversation"
-	"github.com/openimsdk/protocol/sdkws"
+	pbConversation "github.com/zsjinwei/openim-protocol/conversation"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 
 	"github.com/jinzhu/copier"
 )

@@ -12,7 +12,7 @@ import (
 	_ "golang.org/x/image/webp"
 
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 func getImageInfo(filePath string) (*sdk_struct.ImageInfo, error) {

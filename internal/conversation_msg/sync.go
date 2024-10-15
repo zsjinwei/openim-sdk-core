@@ -21,10 +21,10 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/common"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/protocol/msg"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/msg"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func (c *Conversation) SyncAllConversationHashReadSeqs(ctx context.Context) error {

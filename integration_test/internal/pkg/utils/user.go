@@ -2,12 +2,13 @@ package utils
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
 	"strconv"
 	"strings"
+
+	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 func GenUserIDs(num int) []string {

@@ -17,7 +17,7 @@ package conversation_msg
 import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 
-	pbConversation "github.com/openimsdk/protocol/conversation"
+	pbConversation "github.com/zsjinwei/openim-protocol/conversation"
 )
 
 func ServerConversationToLocal(conversation *pbConversation.Conversation) *model_struct.LocalConversation {

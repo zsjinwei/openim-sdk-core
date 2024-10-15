@@ -16,7 +16,8 @@ package test
 
 import (
 	"context"
-	"github.com/openimsdk/tools/log"
+
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 type OnConnListener struct{}

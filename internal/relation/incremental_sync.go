@@ -5,8 +5,8 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
-	"github.com/openimsdk/protocol/relation"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/relation"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 func (r *Relation) IncrSyncFriends(ctx context.Context) error {

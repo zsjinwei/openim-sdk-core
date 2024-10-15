@@ -26,8 +26,8 @@ import (
 
 	"github.com/jinzhu/copier"
 
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 // Delete the local and server

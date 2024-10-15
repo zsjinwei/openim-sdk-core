@@ -6,9 +6,9 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	"github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/msg"
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-protocol/msg"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 type ApiMsgSender struct {

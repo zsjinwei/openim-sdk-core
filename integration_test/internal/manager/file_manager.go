@@ -2,10 +2,11 @@ package manager
 
 import (
 	"context"
+	"os"
+
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/decorator"
-	"github.com/openimsdk/tools/errs"
-	"os"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 type TestFileManager struct {

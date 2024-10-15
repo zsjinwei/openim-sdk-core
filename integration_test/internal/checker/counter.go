@@ -3,17 +3,18 @@ package checker
 import (
 	"context"
 	"fmt"
+	"strings"
+	"sync"
+	"time"
+
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/decorator"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/progress"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/reerrgroup"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/sdk"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/stringutil"
-	"strings"
-	"sync"
-	"time"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/stringutil"
 )
 
 type Counter struct {

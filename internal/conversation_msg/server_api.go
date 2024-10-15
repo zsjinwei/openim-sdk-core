@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	pbConversation "github.com/openimsdk/protocol/conversation"
-	pbMsg "github.com/openimsdk/protocol/msg"
+	pbConversation "github.com/zsjinwei/openim-protocol/conversation"
+	pbMsg "github.com/zsjinwei/openim-protocol/msg"
 )
 
 func (c *Conversation) markMsgAsRead2Server(ctx context.Context, conversationID string, seqs []int64) error {

@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/protocol/relation"
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/relation"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 func (r *Relation) getDesignatedFriendsApply(ctx context.Context, req *relation.GetDesignatedFriendsApplyReq) ([]*sdkws.FriendRequest, error) {

@@ -3,17 +3,18 @@ package module
 import (
 	"context"
 	"fmt"
-	"github.com/openimsdk/tools/utils/datautil"
 	"math/rand"
 	"os"
 	"sync"
 	"sync/atomic"
 	"time"
 
+	"github.com/zsjinwei/openim-tools/utils/datautil"
+
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	"github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 var (

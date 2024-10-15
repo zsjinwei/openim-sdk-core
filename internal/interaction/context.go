@@ -17,7 +17,7 @@ package interaction
 import (
 	"time"
 
-	"github.com/openimsdk/protocol/constant"
+	"github.com/zsjinwei/openim-protocol/constant"
 )
 
 type ConnContext struct {

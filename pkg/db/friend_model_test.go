@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func Test_GetFriendListCount(t *testing.T) {

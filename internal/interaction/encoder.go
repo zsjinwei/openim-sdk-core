@@ -17,7 +17,8 @@ package interaction
 import (
 	"bytes"
 	"encoding/gob"
-	"github.com/openimsdk/tools/errs"
+
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 type Encoder interface {

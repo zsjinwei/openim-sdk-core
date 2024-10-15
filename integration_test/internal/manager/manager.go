@@ -9,8 +9,8 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	authPB "github.com/openimsdk/protocol/auth"
-	"github.com/openimsdk/tools/mcontext"
+	authPB "github.com/zsjinwei/openim-protocol/auth"
+	"github.com/zsjinwei/openim-tools/mcontext"
 )
 
 type MetaManager struct {

@@ -17,12 +17,13 @@ package interaction
 import (
 	"context"
 	"errors"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/tools/errs"
 	"sync"
 	"time"
 
-	"github.com/openimsdk/tools/log"
+	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
+	"github.com/zsjinwei/openim-tools/errs"
+
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 type GeneralWsResp struct {

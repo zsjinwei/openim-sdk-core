@@ -2,17 +2,18 @@ package sdk
 
 import (
 	"context"
+	"time"
+
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/utils"
 	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
 	sdkUtils "github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/group"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/utils/datautil"
-	"time"
+	"github.com/zsjinwei/openim-protocol/constant"
+	"github.com/zsjinwei/openim-protocol/group"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 // CreateCommonGroup create a regular group. Group members are the users with IDs

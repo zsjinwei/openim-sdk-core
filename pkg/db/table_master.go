@@ -6,7 +6,7 @@ package db
 import (
 	"context"
 
-	"github.com/openimsdk/tools/errs"
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 func (d *DataBase) GetExistTables(ctx context.Context) ([]string, error) {

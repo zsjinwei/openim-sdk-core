@@ -4,11 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
 	"reflect"
 	"runtime"
 	"runtime/debug"
+
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 type Process struct {

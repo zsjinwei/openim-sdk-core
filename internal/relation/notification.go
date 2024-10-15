@@ -6,8 +6,8 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 func (r *Relation) DoNotification(ctx context.Context, msg *sdkws.MsgData) {

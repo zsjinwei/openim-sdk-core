@@ -6,7 +6,7 @@ import (
 	"reflect"
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/zsjinwei/openim-protocol/sdkws"
 )
 
 func newApi[Req, Resp any](api string) Api[Req, Resp] {

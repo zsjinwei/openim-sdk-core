@@ -18,9 +18,10 @@ import (
 	"bytes"
 	"compress/gzip"
 	"errors"
-	"github.com/openimsdk/tools/errs"
 	"io"
 	"sync"
+
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 var (

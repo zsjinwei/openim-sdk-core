@@ -2,8 +2,9 @@ package utils
 
 import (
 	"fmt"
-	"github.com/openimsdk/tools/errs"
 	"testing"
+
+	"github.com/zsjinwei/openim-tools/errs"
 )
 
 func TestErr(t *testing.T) {

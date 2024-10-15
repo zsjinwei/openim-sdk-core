@@ -19,7 +19,7 @@ import (
 	"errors"
 
 	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 var ErrNotImplemented = errors.New("not set listener")

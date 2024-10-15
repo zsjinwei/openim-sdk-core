@@ -14,7 +14,7 @@
 
 package test
 
-import "github.com/openimsdk/protocol/constant"
+import "github.com/zsjinwei/openim-protocol/constant"
 
 const (
 	APIADDR = "http://127.0.0.1:10002"

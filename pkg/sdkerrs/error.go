@@ -14,7 +14,7 @@
 
 package sdkerrs
 
-import "github.com/openimsdk/tools/errs"
+import "github.com/zsjinwei/openim-tools/errs"
 
 func New(code int, msg string, dtl string) errs.CodeError {
 	return errs.NewCodeError(code, msg).WithDetail(dtl)

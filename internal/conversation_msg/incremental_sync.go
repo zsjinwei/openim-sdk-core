@@ -19,8 +19,8 @@ import (
 
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
-	pbConversation "github.com/openimsdk/protocol/conversation"
-	"github.com/openimsdk/tools/utils/datautil"
+	pbConversation "github.com/zsjinwei/openim-protocol/conversation"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 )
 
 func (c *Conversation) IncrSyncConversations(ctx context.Context) error {

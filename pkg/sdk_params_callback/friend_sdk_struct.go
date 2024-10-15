@@ -16,7 +16,7 @@ package sdk_params_callback
 
 import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/protocol/wrapperspb"
+	"github.com/zsjinwei/openim-protocol/wrapperspb"
 )
 
 type ProcessFriendApplicationParams struct {

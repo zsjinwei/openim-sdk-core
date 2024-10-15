@@ -14,11 +14,11 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	authPB "github.com/openimsdk/protocol/auth"
-	"github.com/openimsdk/protocol/msg"
-	"github.com/openimsdk/tools/errs"
-	"github.com/openimsdk/tools/log"
-	"github.com/openimsdk/tools/mcontext"
+	authPB "github.com/zsjinwei/openim-protocol/auth"
+	"github.com/zsjinwei/openim-protocol/msg"
+	"github.com/zsjinwei/openim-tools/errs"
+	"github.com/zsjinwei/openim-tools/log"
+	"github.com/zsjinwei/openim-tools/mcontext"
 )
 
 const (

@@ -13,11 +13,11 @@ import (
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/page"
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
-	"github.com/openimsdk/protocol/relation"
-	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsjinwei/openim-protocol/relation"
+	"github.com/zsjinwei/openim-tools/utils/datautil"
 
-	"github.com/openimsdk/protocol/sdkws"
-	"github.com/openimsdk/tools/log"
+	"github.com/zsjinwei/openim-protocol/sdkws"
+	"github.com/zsjinwei/openim-tools/log"
 )
 
 const (
