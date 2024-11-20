@@ -275,3 +275,8 @@ func (w *WrapperConMsg) FetchSurroundingMessages(_ js.Value, args []js.Value) in
 	callback := event_listener.NewBaseCallback(utils.FirstLower(utils.GetSelfFuncName()), w.commonFunc)
 	return event_listener.NewCaller(open_im_sdk.FetchSurroundingMessages, callback, &args).AsyncCallWithCallback()
 }
+
+func (w *WrapperConMsg) GetGroupMessageHasRead(_ js.Value, args []js.Value) interface{} {
+	callback := event_listener.NewBaseCallback(utils.FirstLower(utils.GetSelfFuncName()), w.commonFunc)
+	return event_listener.NewCaller(open_im_sdk.GetGroupMessageHasRead, callback, &args).AsyncCallWithCallback()
+}

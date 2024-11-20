@@ -57,6 +57,7 @@ var (
 	SendMsg                          = newApi[msg.SendMsgReq, msg.SendMsgResp]("/msg/send_msg")
 	GetServerTime                    = newApi[msg.GetServerTimeReq, msg.GetServerTimeResp]("/msg/get_server_time")
 	GetStreamMsg                     = newApi[msg.GetStreamMsgReq, msg.GetStreamMsgResp]("/msg/get_stream_msg")
+	GetGroupMessageHasRead           = newApi[msg.GetGroupMessageHasReadReq, msg.GetGroupMessageHasReadResp]("/msg/get_group_message_has_read")
 )
 
 var (

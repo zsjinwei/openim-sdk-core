@@ -224,8 +224,27 @@ func (c *Conversation) doUnreadCount(ctx context.Context, conversation *model_st
 	return nil
 }
 
+type GroupChatHasReadInfo struct {
+	Seq              int64                        `json:"seq"`
+	GroupHasReadInfo *sdk_struct.GroupHasReadInfo `json:"groupHasReadInfo"`
+}
+
+type MarkAsReadTipsEx struct {
+	*sdkws.MarkAsReadTips
+	Ex string `json:"ex,omitempty"`
+}
+
+func (c *Conversation) getGroupChatHasReadInfo(seq int64, infos []GroupChatHasReadInfo) *sdk_struct.GroupHasReadInfo {
+	for _, info := range infos {
+		if seq == info.Seq && info.GroupHasReadInfo != nil {
+			return info.GroupHasReadInfo
+		}
+	}
+	return nil
+}
+
 func (c *Conversation) doReadDrawing(ctx context.Context, msg *sdkws.MsgData) error {
-	tips := &sdkws.MarkAsReadTips{}
+	tips := &sdkws.MarkAsReadTipsEx{}
 	err := utils.UnmarshalNotificationElem(msg.Content, tips)
 	if err != nil {
 		log.ZWarn(ctx, "UnmarshalNotificationElem err", err, "msg", msg)
@@ -277,6 +296,71 @@ func (c *Conversation) doReadDrawing(ctx context.Context, msg *sdkws.MsgData) er
 			var messageReceiptResp = []*sdk_struct.MessageReceipt{{UserID: tips.MarkAsReadUserID, MsgIDList: successMsgIDs,
 				SessionType: conversation.ConversationType, ReadTime: msg.SendTime}}
 			c.msgListener().OnRecvC2CReadReceipt(utils.StructToJsonString(messageReceiptResp))
+		} else if conversation.ConversationType == constant.ReadGroupChatType || conversation.ConversationType == constant.WriteGroupChatType {
+			latestMsg := &sdk_struct.MsgStruct{}
+			if err := json.Unmarshal([]byte(conversation.LatestMsg), latestMsg); err != nil {
+				log.ZWarn(ctx, "Unmarshal err", err, "conversationID", tips.ConversationID, "latestMsg", conversation.LatestMsg)
+				return err
+			}
+
+			exStr := tips.Ex
+			groupChatReadInfos := []GroupChatHasReadInfo{}
+			_ = utils.JsonStringToStruct(exStr, &groupChatReadInfos)
+
+			var messageReceiptResp = sdk_struct.GroupMessageReceiptInfo{
+				ConversationID:       conversation.ConversationID,
+				GroupMessageReadInfo: []sdk_struct.GroupMessageReadInfo{},
+			}
+			var successMsgIDs []string
+			for _, message := range messages {
+				attachInfo := sdk_struct.AttachedInfoElem{}
+				_ = utils.JsonStringToStruct(message.AttachedInfo, &attachInfo)
+				attachInfo.HasReadTime = msg.SendTime
+
+				groupMemberCount := int32(0)
+				hasReadCount := int32(0)
+				unreadCount := int32(0)
+				readMemberIDs := []string{}
+				readMembers := []model_struct.LocalGroupMember{}
+
+				groupChatReadInfo := c.getGroupChatHasReadInfo(message.Seq, groupChatReadInfos)
+				if groupChatReadInfo != nil {
+					attachInfo.GroupHasReadInfo = *groupChatReadInfo
+					groupMemberCount = groupChatReadInfo.GroupMemberCount
+					readMemberIDs = groupChatReadInfo.HasReadUserIDList
+					hasReadCount = groupChatReadInfo.HasReadCount
+					unreadCount = groupMemberCount - hasReadCount - 1
+
+					if len(readMemberIDs) > 0 {
+						gm, err := c.group.GetSpecifiedGroupMembersInfo(ctx, conversation.GroupID, readMemberIDs)
+						if err == nil && gm != nil {
+							for _, member := range gm {
+								readMembers = append(readMembers, *member)
+							}
+						}
+					}
+				}
+				message.AttachedInfo = utils.StructToJsonString(attachInfo)
+				message.IsRead = true
+				if err = c.db.UpdateMessage(ctx, tips.ConversationID, message); err != nil {
+					log.ZWarn(ctx, "UpdateMessage err", err, "conversationID", tips.ConversationID, "message", message)
+					return err
+				} else {
+					if latestMsg.ClientMsgID == message.ClientMsgID {
+						latestMsg.IsRead = message.IsRead
+						conversation.LatestMsg = utils.StructToJsonString(latestMsg)
+						_ = common.TriggerCmdUpdateConversation(ctx, common.UpdateConNode{ConID: conversation.ConversationID, Action: constant.AddConOrUpLatMsg, Args: *conversation}, c.GetCh())
+					}
+					successMsgIDs = append(successMsgIDs, message.ClientMsgID)
+					messageReceiptResp.GroupMessageReadInfo = append(messageReceiptResp.GroupMessageReadInfo, sdk_struct.GroupMessageReadInfo{
+						ClientMsgID:  message.ClientMsgID,
+						HasReadCount: hasReadCount,
+						UnreadCount:  unreadCount,
+						ReadMembers:  readMembers,
+					})
+				}
+			}
+			c.msgListener().OnRecvGroupReadReceipt(utils.StructToJsonString(messageReceiptResp))
 		}
 	} else {
 		return c.doUnreadCount(ctx, conversation, tips.HasReadSeq, tips.Seqs)

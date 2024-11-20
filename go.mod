@@ -59,3 +59,5 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240318140521-94a12d6c2237 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/openimsdk/protocol v0.0.72 => github.com/zsjinwei/openim-protocol v0.0.72-beta.7

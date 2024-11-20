@@ -2,9 +2,11 @@ package conversation_msg
 
 import (
 	"context"
+
 	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
 	pbConversation "github.com/openimsdk/protocol/conversation"
 	pbMsg "github.com/openimsdk/protocol/msg"
+	"github.com/openimsdk/protocol/sdkws"
 )
 
 func (c *Conversation) markMsgAsRead2Server(ctx context.Context, conversationID string, seqs []int64) error {
@@ -73,4 +75,9 @@ func (c *Conversation) getIncrementalConversationFromServer(ctx context.Context,
 
 func (c *Conversation) getStreamMsg(ctx context.Context, clientMsgID string) (*pbMsg.GetStreamMsgResp, error) {
 	return api.GetStreamMsg.Invoke(ctx, &pbMsg.GetStreamMsgReq{ClientMsgID: clientMsgID})
+}
+
+func (c *Conversation) getGroupMessageHasReadFromServer(ctx context.Context, conversationID string, clientMsgID string, readType int32, pagination *sdkws.RequestPagination) (*pbMsg.GetGroupMessageHasReadResp, error) {
+	req := &pbMsg.GetGroupMessageHasReadReq{ConversationID: conversationID, ClientMsgID: clientMsgID, Type: readType, Pagination: pagination}
+	return api.GetGroupMessageHasRead.Invoke(ctx, req)
 }
