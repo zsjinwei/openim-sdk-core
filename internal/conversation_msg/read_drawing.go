@@ -244,7 +244,7 @@ func (c *Conversation) getGroupChatHasReadInfo(seq int64, infos []GroupChatHasRe
 }
 
 func (c *Conversation) doReadDrawing(ctx context.Context, msg *sdkws.MsgData) error {
-	tips := &sdkws.MarkAsReadTipsEx{}
+	tips := &MarkAsReadTipsEx{}
 	err := utils.UnmarshalNotificationElem(msg.Content, tips)
 	if err != nil {
 		log.ZWarn(ctx, "UnmarshalNotificationElem err", err, "msg", msg)

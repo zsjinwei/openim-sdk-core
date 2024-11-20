@@ -956,3 +956,110 @@ func (c *Conversation) FetchSurroundingMessages(ctx context.Context, conversatio
 	sort.Sort(sdk_struct.NewMsgList(result))
 	return result, nil
 }
+
+type GroupMessageMemberReadInfo struct {
+	Member *model_struct.LocalGroupMember `json:"member"`
+	Time   int64                          `json:"time"`
+}
+
+type GroupMessageHasReadInfo struct {
+	ReadMemberCount   int64                         `json:"readMemberCount"`
+	UnreadMemberCount int64                         `json:"unreadMemberCount"`
+	ReadInfos         []*GroupMessageMemberReadInfo `json:"readInfos"`
+	UnreadInfos       []*GroupMessageMemberReadInfo `json:"unreadInfos"`
+}
+
+func (c *Conversation) GetGroupMessageHasRead(ctx context.Context, conversationID string, clientMsgID string, withReadTime bool) (*GroupMessageHasReadInfo, error) {
+	_, err := c.db.GetConversation(ctx, conversationID)
+	if err != nil {
+		return nil, err
+	}
+
+	msgs, err := c.db.GetMessagesByClientMsgIDs(ctx, conversationID, []string{clientMsgID})
+	if err != nil {
+		return nil, err
+	}
+	if len(msgs) == 0 {
+		return nil, errors.New("message not found")
+	}
+
+	msgData := msgs[0]
+
+	if msgData.SessionType != constant.ReadGroupChatType && msgData.SessionType != constant.WriteGroupChatType {
+		return nil, errors.New("not group chat message")
+	}
+
+	attachedInfoStr := msgData.AttachedInfo
+	var attachedInfo sdk_struct.AttachedInfoElem
+	_ = utils.JsonStringToStruct(attachedInfoStr, &attachedInfo)
+
+	readInfo := &GroupMessageHasReadInfo{}
+
+	groupMemberCount := attachedInfo.GroupHasReadInfo.GroupMemberCount
+	readCount := attachedInfo.GroupHasReadInfo.HasReadCount
+	unreadCount := groupMemberCount - readCount - 1
+	if unreadCount < 0 {
+		unreadCount = 0
+	}
+
+	readInfo.ReadMemberCount = int64(readCount)
+	readInfo.UnreadMemberCount = int64(unreadCount)
+
+	groupMembers, err := c.db.GetGroupMemberListByGroupID(ctx, msgData.RecvID)
+	if err != nil {
+		return nil, err
+	}
+
+	readTimeMap := make(map[string]int64)
+
+	if withReadTime {
+		resp, err := c.getGroupMessageHasReadFromServer(ctx, conversationID, clientMsgID, 0, &sdkws.RequestPagination{
+			PageNumber: 0,
+			ShowNumber: 0,
+		})
+		if err != nil {
+			return nil, err
+		}
+
+		for _, read := range resp.Reads {
+			readTimeMap[read.UserID] = read.ReadTime
+		}
+	}
+
+	for _, member := range groupMembers {
+		if member.UserID == msgData.SendID {
+			continue
+		}
+
+		if len(readTimeMap) > 0 {
+			readTime, ok := readTimeMap[member.UserID]
+			if ok {
+				memberReadInfo := &GroupMessageMemberReadInfo{}
+				memberReadInfo.Time = readTime
+				memberReadInfo.Member = member
+				readInfo.ReadInfos = append(readInfo.ReadInfos, memberReadInfo)
+			} else {
+				memberUnreadInfo := &GroupMessageMemberReadInfo{}
+				memberUnreadInfo.Time = 0
+				memberUnreadInfo.Member = member
+				readInfo.UnreadInfos = append(readInfo.UnreadInfos, memberUnreadInfo)
+			}
+		} else if len(attachedInfo.GroupHasReadInfo.HasReadUserIDList) > 0 {
+			if utils.IsContain(member.UserID, attachedInfo.GroupHasReadInfo.HasReadUserIDList) {
+				memberReadInfo := &GroupMessageMemberReadInfo{}
+				memberReadInfo.Time = 0
+				memberReadInfo.Member = member
+				readInfo.ReadInfos = append(readInfo.ReadInfos, memberReadInfo)
+			} else {
+				memberUnreadInfo := &GroupMessageMemberReadInfo{}
+				memberUnreadInfo.Time = 0
+				memberUnreadInfo.Member = member
+				readInfo.UnreadInfos = append(readInfo.UnreadInfos, memberUnreadInfo)
+			}
+		} else {
+			return nil, errors.New("read info not found")
+		}
+	}
+
+	return readInfo, nil
+}

@@ -9,7 +9,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	google.golang.org/protobuf v1.33.0
 	gorm.io/driver/sqlite v1.5.5
-	nhooyr.io/websocket v1.8.10
+	nhooyr.io/websocket v1.8.17
 )
 
 require golang.org/x/net v0.22.0 // indirect
@@ -60,4 +60,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/openimsdk/protocol v0.0.72 => github.com/zsjinwei/openim-protocol v0.0.72-beta.7
+replace github.com/openimsdk/protocol v0.0.72-alpha.54 => github.com/zsjinwei/openim-protocol v0.0.72-beta.7

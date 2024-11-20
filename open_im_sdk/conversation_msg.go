@@ -199,6 +199,6 @@ func FetchSurroundingMessages(callback open_im_sdk_callback.Base, operationID st
 	call(callback, operationID, UserForSDK.Conversation().FetchSurroundingMessages, conversationID, seq, before, after)
 }
 
-func GetGroupMessageHasRead(callback open_im_sdk_callback.Base, operationID string, conversationID string, clientMsgID string) {
-	call(callback, operationID, UserForSDK.Conversation().GetGroupMessageHasRead, conversationID, clientMsgID)
+func GetGroupMessageHasRead(callback open_im_sdk_callback.Base, operationID string, conversationID string, clientMsgID string, withReadTime bool) {
+	call(callback, operationID, UserForSDK.Conversation().GetGroupMessageHasRead, conversationID, clientMsgID, withReadTime)
 }
